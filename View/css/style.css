@@ -68,17 +68,14 @@ body{
 }
 
 .box input[type = submit],
-.box button,
-.box select{
-    width: 200px;
-    color: #d63151;
+.box button{
+    width: 260px;
+    background: #3897f0;
+    color: #fff;
     border: 0;
-    background: none;
     display: block;
-    margin: 20px auto;
-    border: 2px solid #d63151 ;
-    padding: 15px 0px;
-    border-radius: 24px;
+    margin: 5px auto;
+    border-radius: 4px;
     transition: 0.5s; 
     cursor: pointer;
     font-weight: 900;
