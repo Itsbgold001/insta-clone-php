@@ -18,10 +18,6 @@ ul{
     list-style: none;
 }
 
-.content{
-    margin: 0 auto;
-}
-
 ::placeholder { 
     color: #9c9c9c;
     font-size: 12px; 
