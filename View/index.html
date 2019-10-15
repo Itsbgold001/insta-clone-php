@@ -4,29 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/config.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/all.js"></script>
-    <title>Document</title>
+    <title>Instagram</title>
 </head>
 <body>
     <div class="box">
-        <img src="./svg/Instagram-01.svg" alt="Instagram">
-        <h2>Cadastre-se para ver fotos e vídeos dos seus amigos.</h2>
+        <div class="logo">
+            <img src="./images/logo.png" alt="Instagram">
+        </div>
+        
+        <h2 class="content">Cadastre-se para ver fotos e vídeos dos seus amigos.</h2>
         <button class="btn-facebook">
             <i class="fab fa-facebook-square"></i>
             <p>Entrar com o Facebook</p>
         </button>
 
+        <div class="ou">
+            <div class="row"></div>
+            <p>OU</p>
+            <div class="row"></div>
+        </div>
+
         <form action="" method="post">
-            <input type="text" name="phoneMail">
-            <input type="text" name="completeName">
-            <input type="text" name="user">
-            <input type="password" name="password">
+            <input type="text" placeholder="Número do celular ou email" name="phoneMail">
+            <input type="text" placeholder="Nome completo" name="completeName">
+            <input type="text" placeholder="Nome de usuário" name="user">
+            <input type="password" placeholder="Senha" name="password">
             
             <input type="submit" value="Cadastrar-se">
         </form>
+
+        <p class="politica content">Ao se cadastrar, você concorda com nossos <strong>, Política de Dados e Política de Cookies.</strong></p>
     </div>
+
 </body>
 </html>
