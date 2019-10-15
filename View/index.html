@@ -6,50 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/aux.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/all.js"></script>
-    <title>Instagram</title>
+    <title>InstaMVP</title>
 </head>
 <body>
-    <!--<img src="./images/phone.png" alt="Phone" class="phone">-->
+    <div class="content">
+        <figure class="phone">
+            <img src="./images/phone.png" alt="Phone">
+        </figure>
 
-    <div class="box mt50">
-        <div class="logo">
-            <img src="./images/logo.png" alt="Instagram">
+        <div class="form mt30">
+            <div class="box">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="Instagram">
+                </div>
+                
+                <h2 class="content">Cadastre-se para ver fotos e vídeos dos seus amigos.</h2>
+                <button class="btn-facebook">
+                    <i class="fab fa-facebook-square"></i>
+                    <p>Entrar com o Facebook</p>
+                </button>
+
+                <div class="ou">
+                    <div class="row"></div>
+                    <p>OU</p>
+                    <div class="row"></div>
+                </div>
+
+                <form action="" method="post">
+                    <input type="text" placeholder="Número do celular ou email" name="phoneMail">
+                    <input type="text" placeholder="Nome completo" name="completeName">
+                    <input type="text" placeholder="Nome de usuário" name="user">
+                    <input type="password" placeholder="Senha" name="password">
+                    
+                    <input type="submit" value="Cadastrar-se">
+                </form>
+
+                <p class="politica content">Ao se cadastrar, você concorda com nossos <strong>, Política de Dados e Política de Cookies.</strong></p>
+            </div>
+
+            <div class="box">
+                <p class="conecte">Tem uma conta? <a href="login.html">Conecte-se</a></p>
+            </div>
+
+            <div class="aplicativo">
+                <p>Obtenha o aplicativo</p>
+                <img src="./images/appStore.png" alt="App Store">
+                <img src="./images/googlePlay.png" alt="Google Play">
+            </div>
         </div>
-        
-        <h2 class="content">Cadastre-se para ver fotos e vídeos dos seus amigos.</h2>
-        <button class="btn-facebook">
-            <i class="fab fa-facebook-square"></i>
-            <p>Entrar com o Facebook</p>
-        </button>
 
-        <div class="ou">
-            <div class="row"></div>
-            <p>OU</p>
-            <div class="row"></div>
-        </div>
-
-        <form action="" method="post">
-            <input type="text" placeholder="Número do celular ou email" name="phoneMail">
-            <input type="text" placeholder="Nome completo" name="completeName">
-            <input type="text" placeholder="Nome de usuário" name="user">
-            <input type="password" placeholder="Senha" name="password">
-            
-            <input type="submit" value="Cadastrar-se">
-        </form>
-
-        <p class="politica content">Ao se cadastrar, você concorda com nossos <strong>, Política de Dados e Política de Cookies.</strong></p>
+        <footer class="footer">
+                <ul>
+                    <li>sobre nós</li>
+                    <li>suporte</li>
+                    <li>imprensa</li>
+                    <li>api</li>
+                    <li>carreiras</li>
+                    <li>privacidade</li>
+                    <li>termos</li>
+                    <li>diretório</li>
+                    <li>perfis</li>
+                    <li>hashtags</li>
+                    <li>idioma</li>
+                </ul>
+                <p>© 2019 instagram de guilherme caires e jefferson eloy</p>
+        </footer>
     </div>
 
-    <div class="box">
-        <p class="conecte">Tem uma conta? <a href="login.html">Conecte-se</a></p>
-    </div>
 
-    <div class="aplicativo">
-        <p>Obtenha o aplicativo</p>
-        <img src="./images/appStore.png" alt="App Store">
-        <img src="./images/googlePlay.png" alt="Google Play">
-    </div>
 </body>
 </html>
