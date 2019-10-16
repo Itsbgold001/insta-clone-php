@@ -6,69 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/aux.css">
+    <link rel="stylesheet" href="./css/auxiliary.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/all.js"></script>
     <title>InstaMVP</title>
 </head>
 <body>
-    <div class="content">
-        <div class="form mt30">
-            <div class="box">
-                <div class="logo">
-                    <img src="./images/logo.png" alt="Instagram">
-                </div>
-               
-                <form action="login.php" method="post">
-                    <input type="text" placeholder="Número do celular ou email" name="phoneMail">
-                    <input type="password" placeholder="Senha" name="senha">
-                    
-                    <button type="submit" name="entrar">Entrar</button>
-                </form>
+
+    <div class="content mt30">
+        <div class="box">
+            <figure class="logo">
+                <img src="./images/logo.png" alt="Instagram">
+            </figure>
+
+            <form action="" method="post">
+                <input type="text" placeholder="Número do celular ou email" name="phoneMail">
+                <input type="password" placeholder="Senha" name="password">
                 
-                <div class="ou">
-                    <div class="row"></div>
-                    <p>OU</p>
-                    <div class="row"></div>
-                </div>
+                <input type="submit" value="Entrar">
+            </form>
 
-                <button class="btn-facebook">
-                    <i class="fab fa-facebook-square"></i>
-                    <p>Entrar com o Facebook</p>
-                </button>
-               
-
-                
+            <div class="ou">
+                <div class="row dib"></div>
+                    <p class="dib">OU</p>
+                <div class="row dib"></div>
             </div>
 
-            <div class="box">
-                <p class="conecte">Tem uma conta? <a href="login.html">Conecte-se</a></p>
-            </div>
-
-            <div class="aplicativo">
-                <p>Obtenha o aplicativo</p>
-                <img src="./images/appStore.png" alt="App Store">
-                <img src="./images/googlePlay.png" alt="Google Play">
-            </div>
+            <button class="btn-facebook" onclick="unavailable()">
+                <i class="fab fa-facebook-square dib"></i>
+                <p class="dib">Entrar com o Facebook</p>
+            </button>
         </div>
 
-        <footer class="footer">
-                <ul>
-                    <li>sobre nós</li>
-                    <li>suporte</li>
-                    <li>imprensa</li>
-                    <li>api</li>
-                    <li>carreiras</li>
-                    <li>privacidade</li>
-                    <li>termos</li>
-                    <li>diretório</li>
-                    <li>perfis</li>
-                    <li>hashtags</li>
-                    <li>idioma</li>
-                </ul>
-                <p>© 2019 instagram de guilherme caires e jefferson eloy</p>
-        </footer>
+        <div class="box">
+            <p class="login">Não tem uma conta?<a href="login.html">Conecte-se</a></p>
+        </div>
+
+        <div class="app">
+            <p>Obtenha o aplicativo</p>
+            <a target="_blank" href="https://apps.apple.com/app/instagram/id389801252?vt=lo"><img src="./images/appStore.png" alt="App Store"></a>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DsignupPage%26ig_mid%3DXAT0CQAEAAFACL3C-_FM5_-0TQ4O%26utm_content%3Dlo%26utm_medium%3Dbadge"><img src="./images/googlePlay.png" alt="Google Play"></a>
+        </div>
     </div>
-    
+
+    <footer class="footer">
+        <ul>
+            <li>sobre nós</li>
+            <li>suporte</li>
+            <li>imprensa</li>
+            <li>api</li>
+            <li>carreiras</li>
+            <li>privacidade</li>
+            <li>termos</li>
+            <li>diretório</li>
+            <li>perfis</li>
+            <li>hashtags</li>
+            <li>idioma</li>
+        </ul>
+        <p>© 2019 insta mvp de guilherme caires e jefferson eloy</p>
+    </footer>
+</div>
+
 </body>
 </html>
