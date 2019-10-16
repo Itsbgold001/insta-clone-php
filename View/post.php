@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/aux.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/all.js"></script>
-    <title>InstaMVP - <?php echo (user = oi)?></title>
+    <title>@ <?php  ?></title>
 </head>
 <body>
-    <div class="content">
-        
+
+    <div class="content994">
+            
     </div>
 
 </body>

@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="./css/aux.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/all.js"></script>
+    <script src="./js/font-awesome-all.js"></script>
+    <script src="./js/alerts.js"></script>
     <title>InstaMVP</title>
 </head>
-<body>
+<body onload="/*mvc()*/">
     <div class="content994">
 
         <figure class="phone">
@@ -22,13 +23,13 @@
         <div class="form mt30">
             <div class="box">
 
-                <div class="logo">
+                <figure class="logo">
                     <img src="./images/logo.png" alt="Instagram">
-                </div>
+                </figure>
                 
                 <h2 class="content">Cadastre-se para ver fotos e vídeos dos seus amigos.</h2>
 
-                <button class="btn-facebook">
+                <button class="btn-facebook" onclick="unavailable()">
                     <i class="fab fa-facebook-square dib"></i>
                     <p class="dib">Entrar com o Facebook</p>
                 </button>
@@ -48,7 +49,9 @@
                     <input type="submit" value="Cadastrar-se">
                 </form>
 
-                <p class="politica content">Ao se cadastrar, você concorda com nossos <strong>, Política de Dados e Política de Cookies.</strong></p>
+                <div class="politics content">
+                    <p>Ao se cadastrar, você concorda com nossos <strong>, Política de Dados e Política de Cookies.</strong></p>
+                </div>
             </div>
 
             <div class="box">
@@ -57,8 +60,8 @@
 
             <div class="app">
                 <p>Obtenha o aplicativo</p>
-                <img src="./images/appStore.png" alt="App Store">
-                <img src="./images/googlePlay.png" alt="Google Play">
+                <a target="_blank" href="https://apps.apple.com/app/instagram/id389801252?vt=lo"><img src="./images/appStore.png" alt="App Store"></a>
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DsignupPage%26ig_mid%3DXAT0CQAEAAFACL3C-_FM5_-0TQ4O%26utm_content%3Dlo%26utm_medium%3Dbadge"><img src="./images/googlePlay.png" alt="Google Play"></a>
             </div>
         </div>
 
