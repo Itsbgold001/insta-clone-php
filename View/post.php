@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/aux.css">
+    <link rel="stylesheet" href="./css/auxiliary.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>@<?php setcookie('user', 'guicaires', time()+3600); echo $_COOKIE['user'];?>
+    <title>@<?php setcookie('user', 'guicaires', time()+ 3600 * 24); echo $_COOKIE['user'];?>
     </title>
 </head>
 <body>
