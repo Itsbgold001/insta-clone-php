@@ -18,6 +18,10 @@ ul{
     list-style: none;
 }
 
+h2{
+    font-size: 17px;
+}
+
 ::placeholder { 
     color: #9c9c9c;
     font-size: 12px; 

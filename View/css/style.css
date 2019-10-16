@@ -1,11 +1,7 @@
-.phone{
-    float: left;
-    margin: 119px 0 0 124px;
-}
-
-.form{
-    float: right;
-    margin-right: 120px;
+.logo img{
+    width: 175px; 
+    height: 55px;
+    margin: 15px 0 10px 0;
 }
 
 .box{
@@ -16,19 +12,7 @@
     margin: 10px 0;
     padding: 10px 0;
     text-align: center;
-}
-
-.logo img{
-    width: 175px; 
-    height: 55px;
-    margin: 15px 0 10px 0;
-}
-
-.box h2{
-    font-size: 17px;
-    width: 265px;
-}
-
+} 
 .box input,
 .box button
 {
@@ -37,7 +21,6 @@
     background: #fafafa;
     font-size: 13px;
 }
-
 .box input[type = "text"],
 .box input[type = "password"]
 {
@@ -45,13 +28,10 @@
     margin: 3px 0;
     padding: 10px;
 }
-
 .box input[type = "text"]:focus,
 .box input[type = "password"]:focus{
     border-color: #c4c3c3; 
 }
-
-
 .box input[type = submit],
 .box button{
     width: 260px;
@@ -65,62 +45,50 @@
     font-weight: 900;
 }
 
-.ou{
-    margin: 15px 0;
-}
-
-.ou p{
-    display: inline-block;
-    font-weight: 700;
-    font-size: 13px;
-}
-
-.btn-facebook .fa-facebook-square, .btn-facebook p{
-    display: inline-block;
-}
-
-.btn-facebook{
-    padding: 8px 2px;
-}
-
 .btn-facebook p{
     position: relative;
     top: -3px;
 }
-
 .fa-facebook-square{
-    font-size: 20px;
+    font-size: 19px;
 }
 
-.politica{
-    width: 235px;
-    font-size: 14px;
-    padding-bottom: 35px;
+.ou{
+    margin: 15px 0;
+    font-weight: 700;
+    font-size: 13px;
 }
 
-.conecte{
+.row{
+    background-color: #e9e9e9;
+    width: 110px;
+    height: 1px;
+    position: relative;
+    top: -4px;
+}
+
+.login{
     padding: 15px 0;
     font-size: 14px;
     color: #262626;
 }
 
-.aplicativo{
+.app{
     width: 352px;
-    margin: 0 auto;
     text-align: center;
     font-size: 14px;
 }
 
-.aplicativo img{
+.app img{
     width: 135px;
 }
 
-.aplicativo p{
+.app p{
     padding: 15px 0;
 }
 
 .footer{
-    margin: 100px 0 50px 0;
+    margin: 100px 0 50px 25px;
     float: left;
     text-transform: uppercase;
     font-size: 12px;

@@ -1,0 +1,19 @@
+.phone{
+    float: left;
+    margin: 119px 0 0 124px;
+}
+
+.form{
+    float: right;
+    margin-right: 120px;
+}
+
+.box h2{
+    width: 265px;
+}  
+
+.politica{
+    width: 235px;
+    font-size: 14px;
+    padding-bottom: 35px;
+}
