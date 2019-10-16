@@ -1,0 +1,16 @@
+<?php
+
+include_once ("connection.php");
+
+$selectUser = "select user from users where user = 'user'";
+
+$userSearch = mysqli_query($connection, $selectUser);
+
+mysqli_close($connection);
+
+$arrayDataBase = mysqli_fetch_array($consulta1);
+$dbUser = $arrayDataBase[0];
+
+setcookie('user', '$dbUser', time()+3600);
+
+?>  
