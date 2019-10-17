@@ -11,6 +11,6 @@
     $arrayDataBase = mysqli_fetch_array($userSearch);
     $dbUser = $arrayDataBase[0];
 
-    setcookie('user', '$dbUser', time()+3600);
+    setcookie('user', '$dbUser', time() + 3600 * 24);
 
 ?>  

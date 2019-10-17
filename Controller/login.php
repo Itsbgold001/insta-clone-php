@@ -1,4 +1,5 @@
-<?php
+<?php 
+/*
   include_once ("./Controller/Conexao.php");
   session_start ();
     
@@ -22,4 +23,18 @@
       mysqli_close($conexao);
     }
   }
+  */
+
+  $sql = "SELECT user,password FROM users WHERE user = $user";
+  $query = mysqli_query($dbConnection, $sql);
+  mysqli_close($dbConnection);
+
+if ($user == $dbUser && $password == $dbPassword) {
+  header();
+} else {
+  # code...
+}
+
+
+
 ?>
