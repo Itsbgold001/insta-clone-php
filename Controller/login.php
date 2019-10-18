@@ -16,6 +16,8 @@
   setcookie('user', $dbArray[2], time() + 3600 * 24);
 
   if ($phoneMail == $dbArray[0] && $password == $dbArray[1]) {
+    session_start();
+    setcookie('user', $user, time() + 3600);
     header('Location: ../View/feed.php');
   } else {
     header('Location: ../View/login.html');

@@ -16,5 +16,7 @@
    mysqli_close($dbConnection);
 
    // Faz o cookie e redireciona para o feed
-   setcookie('user', $user, time() + 3600 * 24);
+   session_start();
+   setcookie('user', $user, time() + 3600);
+
    header('Location: ../View/feed.php');

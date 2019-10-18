@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 16-Out-2019 às 16:23
+-- Generation Time: 18-Out-2019 às 16:22
 -- Versão do servidor: 10.1.38-MariaDB
--- versão do PHP: 7.3.4
+-- versão do PHP: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -50,9 +50,9 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `phoneMail` varchar(40) NOT NULL,
-  `name` varchar(40) NOT NULL,
+  `completeName` varchar(40) NOT NULL,
   `user` varchar(20) NOT NULL,
-  `password` varchar(30) NOT NULL,
+  `pass` varchar(30) NOT NULL,
   `bio` text,
   `verified` tinyint(1) DEFAULT NULL,
   `followers` text,
@@ -60,7 +60,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `phoneMail` (`phoneMail`),
   UNIQUE KEY `user` (`user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `users`
+--
+
+INSERT INTO `users` (`id`, `phoneMail`, `completeName`, `user`, `pass`, `bio`, `verified`, `followers`, `followed`) VALUES
+(1, 'gcaires@gmail.com', 'Guilherme Caires', 'gcaires', '123', NULL, NULL, NULL, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
