@@ -13,7 +13,7 @@
     <script src="./js/alerts.js"></script>
     <title>InstaMVP</title>
 </head>
-<body onload="/*mvc()*/">
+<body onload="mvc()">
     <div class="content994">
         <figure class="phone">
             <img src="./images/phone.png" alt="Phone">
@@ -22,7 +22,9 @@
         <div class="form mt30">
             <div class="box">
                 <figure class="logo">
-                    <img src="./images/logo.png" alt="Instagram">
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="Instagram">
+                    </a>
                 </figure>
                 
                 <h2 class="content">Cadastre-se para ver fotos e vídeos dos seus amigos.</h2>
@@ -39,10 +41,10 @@
                 </div>
 
                 <form action="../Controller/index.php" method="post">
-                    <input type="text" placeholder="Número do celular ou email" name="phoneMail">
-                    <input type="text" placeholder="Nome completo" name="completeName">
-                    <input type="text" placeholder="Nome de usuário" name="user">
-                    <input type="password" placeholder="Senha" name="password">
+                    <input type="text" placeholder="Número do celular ou email" required name="phoneMail">
+                    <input type="text" placeholder="Nome completo" required name="completeName">
+                    <input type="text" placeholder="Nome de usuário" required name="user">
+                    <input type="password" placeholder="Senha" required name="password">
                     
                     <input type="submit" value="Cadastrar-se">
                 </form>

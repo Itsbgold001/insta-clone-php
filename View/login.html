@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/auxiliary.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/all.js"></script>
+    <script src="./js/alerts.js"></script>
     <title>InstaMVP</title>
 </head>
 <body>
@@ -16,12 +17,14 @@
     <div class="content mt30">
         <div class="box">
             <figure class="logo">
-                <img src="./images/logo.png" alt="Instagram">
+                <a href="index.html">
+                    <img src="./images/logo.png" alt="Instagram">
+                </a>
             </figure>
 
-            <form action="" method="post">
-                <input type="text" placeholder="Número do celular ou email" name="phoneMail">
-                <input type="password" placeholder="Senha" name="password">
+            <form action="../Controller/login.php" method="post">
+                <input type="text" placeholder="Número do celular ou email" required name="phoneMail">
+                <input type="password" placeholder="Senha" required name="password">
                 
                 <input type="submit" value="Entrar">
             </form>
@@ -39,7 +42,7 @@
         </div>
 
         <div class="box">
-            <p class="login">Não tem uma conta?<a href="login.html">Conecte-se</a></p>
+            <p class="login">Não tem uma conta? <a href="./index.html">Cadastre-se</a></p>
         </div>
 
         <div class="app">
