@@ -1,0 +1,28 @@
+.upload{
+    position: relative;
+    top: 150px;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+}
+.upload input[type="file"],
+.upload input[type="text"],
+.upload textarea{
+    width: 400px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.upload input[type="file"]{
+    text-align: center;
+    height: 50px;
+    background: rgb(233, 233, 233);
+}
+.upload h2{
+    font-size: 22pt;
+    color: #333;
+    margin: 15px 0;
+}
+::placeholder{
+    color: black;
+}

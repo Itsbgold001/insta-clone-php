@@ -1,9 +1,3 @@
-.logo img{
-    width: 175px; 
-    height: 55px;
-    margin: 15px 0 10px 0;
-}
-
 .box{
     width: 350px; 
     background-color: #fff;
@@ -44,6 +38,39 @@
     border-radius: 4px;
     cursor: pointer;
     font-weight: 700;
+}
+
+.navbar{
+    width: 100vw; 
+    margin: 0; 
+    padding: 30px 0 0 0;
+    position: fixed;
+    z-index: 1;
+}
+.navbar #logo{
+    float: left;
+    margin-top: 5px; 
+}
+.navbar #search{
+    position: relative;
+    left: -40px;
+    text-align: center;
+}
+.navbar #icons{
+    float: right;
+    position: relative;
+    top: -35px;
+}
+.navbar a{
+    color: #262626;
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+.logo img{
+    width: 175px; 
+    height: 55px;
+    margin: 15px 0 10px 0;
 }
 
 .btn-facebook p{
