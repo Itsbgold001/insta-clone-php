@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 20-Out-2019 às 17:59
+-- Tempo de geração: 21-Out-2019 às 01:59
 -- Versão do servidor: 10.4.8-MariaDB
 -- versão do PHP: 7.3.10
 
@@ -39,15 +39,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `hashtags` varchar(100) NOT NULL,
   `dateNow` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `posts`
---
-
-INSERT INTO `posts` (`id`, `idUser`, `photo`, `subtitle`, `hashtags`, `dateNow`) VALUES
-(3, 1, '5dac73c24a88e.png', 'teste', 'teste', '2019-10-20 11:48:34'),
-(4, 1, '5dac80ce8c5af.png', 'teste', 'teste', '2019-10-20 12:44:14');
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -69,14 +61,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `phoneMail` (`phoneMail`),
   UNIQUE KEY `user` (`user`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
 INSERT INTO `users` (`id`, `phoneMail`, `completeName`, `user`, `pass`, `bio`, `verified`, `followers`, `followed`) VALUES
-(1, '1', 'Nome Sobrenome', 'Teste', '1', NULL, NULL, NULL, NULL);
+(1, '1', 'Nome Sobrenome', 'teste', '1', NULL, NULL, NULL, NULL),
+(2, 'gcaires@gmail.com', 'Guilherme Caires', 'gcaires', '123', NULL, NULL, NULL, NULL),
+(3, 'jeff@gmail.com', 'Jefferson Eloy', 'jeffEloy', '321', NULL, NULL, NULL, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
