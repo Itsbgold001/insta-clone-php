@@ -1,12 +1,13 @@
 <?php
 session_start();
 include_once('../Model/dbConnection.php');
+include_once('../Model/htmlVars.php');
 
 if(isset($_POST['sendPhoto'])){
-
+    
     $format = array("png","jpeg","jpg",);
     $extension = pathinfo($_FILES['photo']['name'],PATHINFO_EXTENSION);
-
+   
     if(in_array($extension, $format)){
         $diretory = "post/";
         $temp = $_FILES['photo']['tmp_name'];
@@ -14,7 +15,7 @@ if(isset($_POST['sendPhoto'])){
  
         if(move_uploaded_file($temp,$diretory.$newName)){
 
-            $sql = "INSERT INTO posts (idUser, photo, subtitle, hashtags, dateNow) VALUES ('1', '$newName', 'teste', 'teste', NOW())";
+            $sql = "INSERT INTO posts (idUser, photo, subtitle, hashtags, dateNow) VALUES ('1', '$newName', '$subtitle', '$hastag', NOW())";
             $query = mysqli_query($dbConnection, $sql);
             header('Location: feed.php');
 
@@ -53,8 +54,8 @@ if(isset($_POST['sendPhoto'])){
         <form class="upload box" action="" method="post" enctype="multipart/form-data">
             <h2>Escolha sua foto</h2>
             <input class="dib" type="file" name="photo"><br>
-            <textarea class="dib" placeholder="Escreva aqui sua legenda..." name="" id="" cols="30" rows="5"></textarea><br>
-            <textarea class="dib" placeholder="#coloque #aqui #suas #hastags #:)" name="" id="" cols="30" rows="2" maxlength="85"></textarea><br>
+            <textarea class="dib" placeholder="Escreva aqui sua legenda..." name="subtitle" id="" cols="30" rows="5"></textarea><br>
+            <textarea class="dib" placeholder="#coloque #aqui #suas #hastags #:)" name="hastag" id="" cols="30" rows="2" maxlength="85"></textarea><br>
             <input type="submit" name="sendPhoto" value="Enviar">
             <a href="feed.php">Voltar</a>
         </form>
