@@ -16,7 +16,7 @@
                 <li>
                     <div id='icons'>
                         <a href='upload.php'><i class='fas fa-camera'></i></a>
-                        <a href='account.php'><i class='far fa-user'></i></a>
+                        <a href='settings.html'><i class='far fa-user'></i></a>
                     </div>
                 </li>
             </ul>
