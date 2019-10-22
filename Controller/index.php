@@ -10,6 +10,3 @@
    // Inclui a session e redireciona
    include_once('../Model/session.php');
    header('Location: ../View/feed.php');
-
-   // Fim da conexao
-   mysqli_close($dbConnection);

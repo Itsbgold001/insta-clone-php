@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/auxiliary.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/font-awesome-all.js"></script>
-    <script src="./js/alerts.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/auxiliary.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/scripts.js"></script>
+    <script src="js/font-awesome-all.js"></script>
+    <script src="js/alerts.js"></script>
     <title>InstaMVP</title>
     <style>
         .post{
@@ -31,6 +32,17 @@
         }
         .post .icons, .liked, .coments{
             padding: 10px 15px;
+        }
+
+
+        .menu {
+            padding: 50px;
+            transition: padding 0.5s;
+            background-color: #ccf;
+            margin-bottom: 10px;
+        }
+        .abrir {
+            padding: 0px;
         }
     </style>
 </head>
@@ -57,5 +69,21 @@
             <p><strong>user</strong> Este é Cleber, o pato.</p>
         </div>
     </div>
+
+    <div class="menu"></div>
+    <button id="interruptor" type="button">abrir</button>
+    
+    <script>
+        
+        var menu = document.querySelector('div.menu');
+        var botao = document.querySelector('button#interruptor');
+
+        botao.addEventListener('click', function() {
+            var aberto = menu.classList.contains('abrir');
+            menu.classList.toggle('abrir');
+            this.innerHTML = aberto ? 'abrir' : 'fechar';
+        });
+
+    </script>
 </body>
 </html>
