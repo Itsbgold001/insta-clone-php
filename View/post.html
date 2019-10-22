@@ -70,20 +70,34 @@
         </div>
     </div>
 
+    <br><br><br><br><br><br><br><br><br>
+ 
     <div class="menu"></div>
     <button id="interruptor" type="button">abrir</button>
     
     <script>
         
-        var menu = document.querySelector('div.menu');
-        var botao = document.querySelector('button#interruptor');
+        var heart = document.querySelector('div.far');
 
-        botao.addEventListener('click', function() {
-            var aberto = menu.classList.contains('abrir');
-            menu.classList.toggle('abrir');
-            this.innerHTML = aberto ? 'abrir' : 'fechar';
+        heart.addEventListener('click', function() {
+            var like = heart.classList.contains('far');
+            like.classList.toggle('fas');
+            this.innerHTML = like ? 'liked' : 'liked';
         });
 
     </script>
+
+<script>
+        
+    var menu = document.querySelector('div.menu');
+    var botao = document.querySelector('button#interruptor');
+
+    botao.addEventListener('click', function() {
+        var aberto = menu.classList.contains('abrir');
+        menu.classList.toggle('abrir');
+        this.innerHTML = aberto ? 'abrir' : 'fechar';
+    });
+
+</script>
 </body>
 </html>

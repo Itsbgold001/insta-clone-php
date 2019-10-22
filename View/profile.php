@@ -19,7 +19,7 @@
 
     <section class="content994 mt150">
         <header class="info">
-            <img src="/database/user/01.png">
+            <img src="/Dtabase/profile/01.png">
             <h2><?php echo $_SESSION['user'] ?></h2>
         </header>
     </section>
