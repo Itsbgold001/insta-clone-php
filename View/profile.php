@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/auxiliary.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/profile.css">
     <script src="./js/font-awesome-all.js"></script>
     <script src="./js/alerts.js"></script>
     <title><?php echo "$_SESSION[name] "; echo "(@".$_SESSION['user'].")"; ?></title>
@@ -18,9 +19,22 @@
 <i class="fas fa-cog"></i>
 
     <section class="content994 mt150">
-        <header class="info">
-            <img src="/database/user/01.png">
-            <h2><?php echo $_SESSION['user'] ?></h2>
+        <header class="profile">
+            <div class="profileImage dib">
+                <img src="../Database/users/guicaires.jpg">
+            </div>  
+
+            <div class="info dib">
+                <h2 class="profileUser dib"><?php echo $_SESSION['user'] ?></h2>
+                <button class="follow dib btn-facebook">Seguir</button><br>
+                <p> <strong><?php #echo $postNumber; ?>30</strong> publicações</p>
+                <p> <strong><?php #echo $followersNumber; ?>100</strong> seguidores</p>
+                <p> <strong><?php #echo $followNumber; ?>20</strong> seguindo</p>
+                <h3>Guilherme Caires</h3>
+                <p>16.02.2001</p><br>
+                <a href="">@fotografia_caires</a>
+            </div>
+
         </header>
     </section>
 

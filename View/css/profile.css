@@ -1,0 +1,27 @@
+.profileImage img{
+    margin: 0px 100px;
+    border-radius: 100px;
+    box-shadow: 1px 1px 3px rgb(141, 141, 141);
+}
+.profileUser{
+    font-weight: normal;
+    font-size: 30px;
+}
+.info{
+    margin-left: 30px;
+}
+.info h2{
+    margin: 0 20px 0 0;
+}
+.info p{
+    display: inline-block;
+    margin: 20px 30px 0 0;
+}
+button{
+    background: #3897f0;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-weight: 700;
+    color: #fff;
+}
