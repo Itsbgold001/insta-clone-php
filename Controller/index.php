@@ -4,7 +4,7 @@
    include_once('../Model/htmlVars.php');
    
    // Introduzir ao banco de dados
-   $sql = "INSERT INTO users (phoneMail, completeName, user, pass) VALUES ('$phoneMail', '$completeName', '$user', '$password')";
+   $sql = "INSERT INTO users (phoneMail, completeName, user, pass, followers, follow) VALUES ('$phoneMail', '$completeName', '$user', '$password', '0', '0')";
    $query = mysqli_query($dbConnection, $sql);
       
    // Inclui a session e redireciona
