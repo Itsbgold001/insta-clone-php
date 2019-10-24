@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 21-Out-2019 às 01:59
+-- Tempo de geração: 23-Out-2019 às 02:19
 -- Versão do servidor: 10.4.8-MariaDB
 -- versão do PHP: 7.3.10
 
@@ -55,22 +55,23 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user` varchar(20) NOT NULL,
   `pass` varchar(30) NOT NULL,
   `bio` text DEFAULT NULL,
-  `verified` tinyint(1) DEFAULT NULL,
-  `followers` text DEFAULT NULL,
-  `followed` text DEFAULT NULL,
+  `verified` int(11) DEFAULT NULL,
+  `followers` int(11) DEFAULT NULL,
+  `follow` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `phoneMail` (`phoneMail`),
   UNIQUE KEY `user` (`user`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
-INSERT INTO `users` (`id`, `phoneMail`, `completeName`, `user`, `pass`, `bio`, `verified`, `followers`, `followed`) VALUES
+INSERT INTO `users` (`id`, `phoneMail`, `completeName`, `user`, `pass`, `bio`, `verified`, `followers`, `follow`) VALUES
 (1, '1', 'Nome Sobrenome', 'teste', '1', NULL, NULL, NULL, NULL),
 (2, 'gcaires@gmail.com', 'Guilherme Caires', 'gcaires', '123', NULL, NULL, NULL, NULL),
-(3, 'jeff@gmail.com', 'Jefferson Eloy', 'jeffEloy', '321', NULL, NULL, NULL, NULL);
+(3, 'jeff@gmail.com', 'Jefferson Eloy', 'jeffEloy', '321', NULL, NULL, NULL, NULL),
+(4, 'laercio@gmail.com', 'Laercio Seila', 'laercio', 'senha', NULL, NULL, NULL, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
