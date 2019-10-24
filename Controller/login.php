@@ -1,6 +1,6 @@
 <?php 
   // Chama conexao
-  include_once ('../Model/dbConnection.php');
+  include_once('../Model/dbConnection.php');
   include_once('../Model/htmlVars.php');
 
   // Pesquisar no banco de dados
