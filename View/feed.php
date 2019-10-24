@@ -1,5 +1,19 @@
-<?php
-    session_start();
+<?php 
+
+    include_once('../Model/dbConnection.php');
+    include_once('../View/template/navbar.php');
+ session_start();    
+    
+
+    $sql = "SELECT photo FROM posts";
+
+    $result = mysqli_query($dbConnection, $sql);
+    
+    while ($row = mysqli_fetch_array($result)){
+
+        $album[] = $row;   
+ }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -13,15 +27,24 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/auxiliary.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>InstaMVP</title>
+    <title>InstaMVP - @<?php echo $_SESSION['user'];?></title>
     </title>
 </head>
 <body>
+     <table>
+         <tr>
+    <?php   
+    
+    foreach ($album as $photo){
 
-    <?php
-        include_once('./template/navbar.php');
-        include_once('../Model/showPosts.php');
     ?>
+    <td>
+        <img src="<?php echo"./Post/".$photo["photo"]?>" width="260px" height="300px">
 
+    <td>
+    <?php }
+    ?>
+</tr>
+</table>
 </body>
 </html>
