@@ -1,5 +1,6 @@
 <?php
-    session_unset();
-    session_abort();
-    session_write_close();
+    session_start();
+    unset($_SESSION['id']);
+    unset($_SESSION['user']);
+    unset($_SESSION['name']);
     header('Location: ../View/login.html');

@@ -36,9 +36,9 @@
                     <button class="follow dib btn-facebook">Seguir</button><br>
                 </head>
                 <div class="profileNumbers">
-                    <p> <strong><?php #echo $pd->dbPosts; ?></strong>30 publicações</p>
-                    <p> <strong><?php #echo $pd->dbFollowers; ?></strong>300 seguidores</p>
-                    <p> <strong><?php #echo $pd->dbFollow; ?></strong>25 seguindo</p>
+                    <p> <strong><?php #echo $pd->dbPosts; ?>30</strong> publicações</p>
+                    <p> <strong><?php #echo $pd->dbFollowers; ?>300</strong> seguidores</p>
+                    <p> <strong><?php #echo $pd->dbFollow; ?>25</strong> seguindo</p>
                 </div>
                 <footer class="profileFooter">
                     <h3>Guilherme Caires</h3>

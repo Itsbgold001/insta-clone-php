@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 26-Out-2019 às 20:26
+-- Tempo de geração: 26-Out-2019 às 23:40
 -- Versão do servidor: 10.4.8-MariaDB
 -- versão do PHP: 7.3.10
 
@@ -40,14 +40,15 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `dateNow` datetime NOT NULL,
   `likes` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `posts`
 --
 
 INSERT INTO `posts` (`id`, `user`, `photo`, `subtitle`, `hashtags`, `dateNow`, `likes`) VALUES
-(10, 'gcaires', '5db481de36575.jpg', '&#34;Apaga com um sorriso toda a tristeza que te invade a alma. Assim não darás aos que te odeiam a alegria de te verem chorando, mas darás aos que te amam a alegria de te verem sorrindo.&#34;', '#sky #airplane #travell', '2019-10-26 14:26:54', 0);
+(10, 'gcaires', '5db481de36575.jpg', '&#34;Apaga com um sorriso toda a tristeza que te invade a alma. Assim não darás aos que te odeiam a alegria de te verem chorando, mas darás aos que te amam a alegria de te verem sorrindo.&#34;', '#sky #airplane #travell', '2019-10-26 14:26:54', 0),
+(11, 'jeff', '5db4b6c76f76e.jpg', 'Mar roxo.', '#purple #drone\r\n', '2019-10-26 18:12:39', 0);
 
 -- --------------------------------------------------------
 
@@ -71,16 +72,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `phoneMail` (`phoneMail`),
   UNIQUE KEY `user` (`user`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
 INSERT INTO `users` (`id`, `phoneMail`, `completeName`, `user`, `pass`, `bio`, `verified`, `followers`, `follow`, `posts`, `photo`) VALUES
-(1, '1', 'Guilherme Caires', 'gcaires', '1', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'default'),
-(3, 'jeff@gmail.com', 'Jefferson Eloy', 'jeffEloy', '321', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'default'),
-(4, 'laercio@gmail.com', 'Laercio Melo', 'laercioM', 'senha', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'default');
+(3, 'gcaires@gmail.com', 'Guilherme Caires', 'gcaires', '12345678', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'default'),
+(4, 'jeff@gmail.com', 'Jefferson Eloy', 'jeff', '12345678', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'default.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

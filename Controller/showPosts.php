@@ -17,11 +17,12 @@
     }
     
     foreach ($album as $photo){
+        $row = mysqli_fetch_assoc($query);
         echo "
             <div class='post content994'>
                 <div class='bar'>
                     <img src=''>
-                    <strong>$_SESSION[user]</strong>
+                    <strong>$row[user]</strong>
                     <i></i>
                 </div>
 
@@ -37,18 +38,17 @@
                 </div>
         ";
 
-        $row = mysqli_fetch_assoc($query);
-            echo "
-                    <div class='liked'>
-                        <p>Curtido por <strong>$row[likes] pessoas</strong></p>
-                    </div>
-                    <div class='coments'>
-                        <p><strong>$row[user]</strong> $row[subtitle]</p>
-                        <p>$row[hashtags];</p>
-                        <p>$row[dateNow]</p>
-                    </div>
+        echo "
+                <div class='liked'>
+                    <p>Curtido por <strong>$row[likes] pessoas</strong></p>
                 </div>
-            ";
+                <div class='coments'>
+                    <p><strong>$row[user]</strong> $row[subtitle]</p>
+                    <p>$row[hashtags];</p>
+                    <p>$row[dateNow]</p>
+                </div>
+            </div>
+        ";
         
     }
 
