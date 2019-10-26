@@ -17,6 +17,7 @@
                     <div id='icons'>
                         <a href='upload.php'><i class='fas fa-camera'></i></a>
                         <a href='profile.php'><i class='far fa-user'></i></a>
+                        <a href='../Model/exit.php'>Exit</a>
                     </div>
                 </li>
             </ul>

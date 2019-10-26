@@ -15,9 +15,9 @@ if(isset($_POST['sendPhoto'])){
  
         if(move_uploaded_file($temp,$diretory.$newName)){
 
-            $sql = "INSERT INTO posts (idUser, photo, subtitle, hashtags, dateNow) VALUES ('1', '$newName', '$subtitle', '$hashtag', NOW())";
+            $sql = "INSERT INTO posts (user, photo, subtitle, hashtags, dateNow, likes) VALUES ('$_SESSION[user]', '$newName', '$subtitle', '$hashtag', NOW(),'0')";
             $query = mysqli_query($dbConnection, $sql);
-            header('Location: feedBackup.php');
+            header('Location: feed.php');
 
         } else {
             echo "<span style='color: red;'> Erro ao enviar a photo </span>";

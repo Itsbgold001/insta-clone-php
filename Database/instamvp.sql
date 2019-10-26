@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 23-Out-2019 às 02:19
+-- Tempo de geração: 26-Out-2019 às 20:26
 -- Versão do servidor: 10.4.8-MariaDB
 -- versão do PHP: 7.3.10
 
@@ -33,13 +33,21 @@ USE `instamvp`;
 DROP TABLE IF EXISTS `posts`;
 CREATE TABLE IF NOT EXISTS `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `idUser` int(11) NOT NULL,
+  `user` varchar(30) NOT NULL,
   `photo` varchar(40) NOT NULL,
   `subtitle` varchar(300) NOT NULL,
   `hashtags` varchar(100) NOT NULL,
   `dateNow` datetime NOT NULL,
+  `likes` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `posts`
+--
+
+INSERT INTO `posts` (`id`, `user`, `photo`, `subtitle`, `hashtags`, `dateNow`, `likes`) VALUES
+(10, 'gcaires', '5db481de36575.jpg', '&#34;Apaga com um sorriso toda a tristeza que te invade a alma. Assim não darás aos que te odeiam a alegria de te verem chorando, mas darás aos que te amam a alegria de te verem sorrindo.&#34;', '#sky #airplane #travell', '2019-10-26 14:26:54', 0);
 
 -- --------------------------------------------------------
 
@@ -58,20 +66,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `verified` int(11) DEFAULT NULL,
   `followers` int(11) DEFAULT NULL,
   `follow` int(11) DEFAULT NULL,
+  `posts` int(11) NOT NULL,
+  `photo` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `phoneMail` (`phoneMail`),
   UNIQUE KEY `user` (`user`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
-INSERT INTO `users` (`id`, `phoneMail`, `completeName`, `user`, `pass`, `bio`, `verified`, `followers`, `follow`) VALUES
-(1, '1', 'Nome Sobrenome', 'teste', '1', NULL, NULL, NULL, NULL),
-(2, 'gcaires@gmail.com', 'Guilherme Caires', 'gcaires', '123', NULL, NULL, NULL, NULL),
-(3, 'jeff@gmail.com', 'Jefferson Eloy', 'jeffEloy', '321', NULL, NULL, NULL, NULL),
-(4, 'laercio@gmail.com', 'Laercio Seila', 'laercio', 'senha', NULL, NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `phoneMail`, `completeName`, `user`, `pass`, `bio`, `verified`, `followers`, `follow`, `posts`, `photo`) VALUES
+(1, '1', 'Guilherme Caires', 'gcaires', '1', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'default'),
+(3, 'jeff@gmail.com', 'Jefferson Eloy', 'jeffEloy', '321', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'default'),
+(4, 'laercio@gmail.com', 'Laercio Melo', 'laercioM', 'senha', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'default');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

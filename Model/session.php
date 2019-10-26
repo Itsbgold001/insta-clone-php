@@ -1,5 +1,6 @@
 <?php
-    $sql = "SELECT id, user, completeName FROM users WHERE phoneMail = '$phoneMail'";
+    session_abort();
+    $sql = "SELECT id, user, completeName FROM users WHERE phoneMail or user = '$phoneMail'";
     $query = mysqli_query($dbConnection, $sql);
 
     $dbArray = mysqli_fetch_array($query);

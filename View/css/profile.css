@@ -3,20 +3,26 @@
     border-radius: 100px;
     box-shadow: 1px 1px 3px rgb(141, 141, 141);
 }
+
+.profileInfo{
+    margin-left: 30px;
+}
+.profileInfo h2{
+    margin: 0 20px 0 0;
+}
+.profileInfo p{
+    display: inline-block;
+    margin: 20px 30px 0 0;
+}
+
 .profileUser{
     font-weight: normal;
     font-size: 30px;
 }
-.info{
-    margin-left: 30px;
+.profileUser h2{
+    font-size: 100px;
 }
-.info h2{
-    margin: 0 20px 0 0;
-}
-.info p{
-    display: inline-block;
-    margin: 20px 30px 0 0;
-}
+
 button{
     background: #3897f0;
     border: none;
@@ -24,8 +30,4 @@ button{
     padding: 8px 12px;
     font-weight: 700;
     color: #fff;
-}
-.fa-cog{
-    font-size: 25px;
-    line-height: 100px;
 }

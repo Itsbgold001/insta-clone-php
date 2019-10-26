@@ -11,9 +11,10 @@
   $dbArray = mysqli_fetch_array($query);
   $dbPhoneMail = $dbArray[0];
   $dbPassword = $dbArray[1];
+  $dbUserr = $dbArray[2];
 
   // Validacao de login
-  if ($phoneMail == $dbPhoneMail && $password == $dbPassword) {
+  if (($phoneMail == $dbPhoneMail or $phoneMail == $dbUserr) && $password == $dbPassword) {
     include_once("../Model/session.php");
     header('Location: ../View/feed.php');
   } else {

@@ -2,6 +2,7 @@
     width: 350px;
     margin: 0 auto;
 }
+
 .content994{
     width: 994px;
     margin: 0 auto;
@@ -9,6 +10,10 @@
 
 .dib{
     display: inline-block;
+}
+
+.fl{
+    float: left;
 }
 
 .mt30{

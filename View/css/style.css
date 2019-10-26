@@ -116,8 +116,7 @@
 }
 
 .footer{
-    margin: 100px 0 50px 25px;
-    float: left;
+    margin-top: 100px;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;

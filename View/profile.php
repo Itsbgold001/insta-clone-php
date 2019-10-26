@@ -21,26 +21,31 @@
     $pd = new ProfileData();
     $pd->profile($_SESSION['user']);
 ?>
-
+<i class="fas fa-cog"></i>
 
     <section class="content994 mt150">
         <header class="profile">
             <div class="profileImage dib">
+                <?php #echo "<img src='$dbPhoto'>" ?>
                 <img src="../Database/users/guicaires.jpg">
             </div>  
 
-            <div class="info dib">
-                <h2 class="profileUser dib"><?php echo $_SESSION['user'] ?></h2>
-                <button class="follow dib btn-facebook">Seguir</button>
-                <i class="fas fa-cog dib"></i><br>
-                <p> <strong><?php #echo $pd->dbPosts; ?>40</strong> publicações</p>
-                <p> <strong><?php #echo $pd->dbFollowers; ?>100</strong> seguidores</p>
-                <p> <strong><?php #echo $pd->dbFollow; ?>10</strong> seguindo</p>
-                <h3>Guilherme Caires</h3>
-                <p>16.02.2001</p><br>
-                <a href="">@fotografia_caires</a>
+            <div class="profileInfo dib">
+                <head class="profileUser">
+                    <h2 class="dib"><?php echo $_SESSION['user']?></h2>
+                    <button class="follow dib btn-facebook">Seguir</button><br>
+                </head>
+                <div class="profileNumbers">
+                    <p> <strong><?php #echo $pd->dbPosts; ?></strong>30 publicações</p>
+                    <p> <strong><?php #echo $pd->dbFollowers; ?></strong>300 seguidores</p>
+                    <p> <strong><?php #echo $pd->dbFollow; ?></strong>25 seguindo</p>
+                </div>
+                <footer class="profileFooter">
+                    <h3>Guilherme Caires</h3>
+                    <p>16.02.2001</p><br>
+                    <a href="">@fotografia_caires</a>
+                </footer>
             </div>
-
         </header>
     </section>
 

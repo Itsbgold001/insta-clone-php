@@ -1,20 +1,4 @@
-<?php 
-
-    include_once('../Model/dbConnection.php');
-    include_once('../View/template/navbar.php');
- session_start();    
-    
-
-    $sql = "SELECT photo FROM posts";
-
-    $result = mysqli_query($dbConnection, $sql);
-    
-    while ($row = mysqli_fetch_array($result)){
-
-        $album[] = $row;   
- }
-
-?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -27,24 +11,45 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/auxiliary.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>InstaMVP - @<?php echo $_SESSION['user'];?></title>
+    <title>InstaMVP - @<?php echo $_SESSION['user']?></title>
     </title>
+    <style>
+        .post{
+            width: 620px;
+            padding-bottom: 10px;
+            background: #fff;
+            border: 1px rgb(230, 230, 230) solid;
+            border-radius: 3px;
+            box-shadow: #eee 1px 1px 2px;
+            margin-top: 60px;
+        }
+        .post .bar{
+            width: 100%;
+            height: 60px;
+        }
+        .post .image img{
+            width: 100%;
+        }
+        .post .icons, .liked, .coments{
+            padding: 10px 15px;
+        }
+
+
+        .menu {
+            padding: 50px;
+            transition: padding 0.5s;
+            background-color: #ccf;
+            margin-bottom: 10px;
+        }
+        .abrir {
+            padding: 0px;
+        }
+    </style>
 </head>
 <body>
-     <table>
-         <tr>
-    <?php   
-    
-    foreach ($album as $photo){
-
+    <?php  
+        include_once('./template/navbar.php');
+        include_once('../Controller/showPosts.php');
     ?>
-    <td>
-        <img src="<?php echo"./Post/".$photo["photo"]?>" width="260px" height="300px">
-
-    <td>
-    <?php }
-    ?>
-</tr>
-</table>
 </body>
 </html>

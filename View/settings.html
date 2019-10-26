@@ -11,76 +11,25 @@
     <script src="./js/font-awesome-all.js"></script>
     <script src="./js/alerts.js"></script>
     <title>InstaMVP</title>
-    <style>
-        .lateral{
-
-        }
-        .editProfile{
-            
-        }
-        .editPass{
-            display: none;
-        }
-        main{
-            
-        }
-    </style>
 </head>
 <body>
-    <main class="content994">
-
-        <section class="lateral dib">
-
-        </section>
-
-        <form action="../Model/changePass.php" method="post" class="editProfile">
-            <label>Nome:</label>
-            <input type="text" name="completeName" value=""/>
-
-            <label>Nome de Usuário:</label>
-            <input type="text" name="user" value=""/>
-
-            <label>Site:</label>
-            <input name="website" value=""/>
-    
-            <label>Biografia:</label>
-            <input name="bio" value=""/>
-
-            <label>Email:</label>
-            <input name="email" value=""/>
-
-            <label>Telefone:</label>
-            <input name="phone" value=""/>
-
-            <label>Sexo:</label>
-            <select name="gender">
-                <option value="Masculino">Masculino</option>
-                <option value="Feminino">Feminino</option>
-                <option value="Prefiro">Outro</option>
-            </select>
-
-            <input type="submit" value="Enviar">
-        </form>
-
-        <form action="../Model/changePass.php" method="post" class="editPass">
-            <div>
-                <label for="senha">Senha Antiga:</label>
-                <input type="password" name="password" required placeholder="Informe sua senha antiga" />
-            </div>
-            
-            <div>
-                <label for="nova_senha">Nova Senha:</label>
-                <input type="password" name="afterPass" required placeholder="Nova senha" />
-            </div>
-            
-            <div>
-                <label for="senha_confirma">Confirme a nova senha:</label>
-                <input type="password" name="confirmPass" required placeholder="Confirme sua senha" />
-            </div>
-            
-            <input type="submit" value="Alterar Senha">
-        </form>
-    
-    </main>
+    <form action="../Model/changePass.php" method="post">
+        <div>
+            <label for="senha">Senha Antiga:</label>
+            <input type="password" name="password" required placeholder="Informe sua senha antiga" />
+        </div>
+        
+        <div>
+            <label for="nova_senha">Nova Senha:</label>
+            <input type="password" name="afterPass" required placeholder="Nova senha" />
+        </div>
+        
+        <div>
+            <label for="senha_confirma">Confirme a nova senha:</label>
+            <input type="password" name="confirmPass" required placeholder="Confirme sua senha" />
+        </div>
+        
+        <input type="submit" value="Alterar Senha">
+    </form>
 </body>
 </html>            
