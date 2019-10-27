@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once('../Model/verify.php');
 include_once('../Model/dbConnection.php');
 include_once('../Model/htmlVars.php');
 
@@ -9,7 +10,7 @@ if(isset($_POST['sendPhoto'])){
     $extension = pathinfo($_FILES['photo']['name'],PATHINFO_EXTENSION);
    
     if(in_array($extension, $format)){
-        $diretory = "post/";
+        $diretory = "../Database/posts/";
         $temp = $_FILES['photo']['tmp_name'];
         $newName = uniqid().".$extension";
  

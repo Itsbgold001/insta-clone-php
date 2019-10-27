@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php 
+    session_start();
+    include_once('../Model/verify.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -24,27 +27,35 @@
 <i class="fas fa-cog"></i>
 
     <section class="content994 mt150">
+
         <header class="profile">
-            <div class="profileImage dib">
-                <?php #echo "<img src='$dbPhoto'>" ?>
-                <img src="../Database/users/guicaires.jpg">
+
+            <div class="image dib">
+                <img src="../Database/users/<?php echo $_SESSION['photo'];?>">
             </div>  
 
-            <div class="profileInfo dib">
-                <head class="profileUser">
+            <div class="info dib">
+
+                <head class="user">
                     <h2 class="dib"><?php echo $_SESSION['user']?></h2>
-                    <button class="follow dib btn-facebook">Seguir</button><br>
+                    <!--<button class="follow dib btn-facebook">Seguir</button>-->
+                    <!-- <i class="fas fa-user-edit"> -->
+                    <a href="settings.php"><button class="follow dib btn-facebook">Editar perfil</button></a>
+                    </i><i class="fas fa-cog"></i>
                 </head>
-                <div class="profileNumbers">
-                    <p> <strong><?php #echo $pd->dbPosts; ?>30</strong> publicações</p>
-                    <p> <strong><?php #echo $pd->dbFollowers; ?>300</strong> seguidores</p>
-                    <p> <strong><?php #echo $pd->dbFollow; ?>25</strong> seguindo</p>
+
+                <div class="numbers">
+                    <p> <strong><?php echo $_SESSION['posts'];?></strong> publicações</p>
+                    <p> <strong><?php echo $_SESSION['followers'];?></strong> seguidores</p>
+                    <p> <strong><?php echo $_SESSION['follow'];?></strong> seguindo</p>
                 </div>
-                <footer class="profileFooter">
-                    <h3>Guilherme Caires</h3>
-                    <p>16.02.2001</p><br>
-                    <a href="">@fotografia_caires</a>
+
+                <footer class="footer">
+                    <h3><?php echo $_SESSION['name'];?></h3><br>
+                    <p><?php echo $_SESSION['bio'];?></p><br>
+                    <a href="http://localhost/instaMVP/View/profile.php">www.instamvp/<?php echo $_SESSION['user'];?>.com.br</a>
                 </footer>
+
             </div>
         </header>
     </section>

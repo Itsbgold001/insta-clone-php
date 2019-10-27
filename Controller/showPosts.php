@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include_once('../Model/verify.php');
     include_once('../Model/dbConnection.php');     
 
     $sql = "SELECT * FROM posts";
@@ -18,16 +19,20 @@
     
     foreach ($album as $photo){
         $row = mysqli_fetch_assoc($query);
+        $sql2 = "SELECT photo FROM users WHERE user = '$row[user]'";
+        $query2 = mysqli_query($dbConnection,$sql2);
+        $dbArray = mysqli_fetch_array($query2);
+        $user = $dbArray[0];
         echo "
             <div class='post content994'>
                 <div class='bar'>
-                    <img src=''>
+                    <img src='../Database/users/" .$user. "' width=50px' height='50px' style='border-radius:100%; margin:6px;'> </img>
                     <strong>$row[user]</strong>
                     <i></i>
                 </div>
 
                 <figure class='image'>
-                    <img src='./post/" .$photo['photo']. "' width='500px'> </img>
+                    <img src='../Database/posts/" .$photo['photo']. "' width='500px'> </img>
                 </figure>   
                 
                 <div class='icons'>
@@ -42,12 +47,19 @@
                 <div class='liked'>
                     <p>Curtido por <strong>$row[likes] pessoas</strong></p>
                 </div>
-                <div class='coments'>
-                    <p><strong>$row[user]</strong> $row[subtitle]</p>
-                    <p>$row[hashtags];</p>
-                    <p>$row[dateNow]</p>
-                </div>
+                <div class='coments'>    
+        ";
+
+        if ($row['subtitle'] != NULL) {
+            echo "<p><strong>$row[user]:</strong> $row[subtitle]</p><br>";
+        } 
+        if ($row['hashtags'] != NULL) {
+            echo "<p>$row[hashtags]</p><br>";
+        } 
+        echo "
+                <p>$row[dateNow]</p>
             </div>
+        </div>
         ";
         
     }

@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php 
+    session_start();
+    include_once('../Model/verify.php');
+;?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,40 +14,8 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/auxiliary.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/feed.css">
     <title>InstaMVP - @<?php echo $_SESSION['user']?></title>
-    </title>
-    <style>
-        .post{
-            width: 620px;
-            padding-bottom: 10px;
-            background: #fff;
-            border: 1px rgb(230, 230, 230) solid;
-            border-radius: 3px;
-            box-shadow: #eee 1px 1px 2px;
-            margin-top: 60px;
-        }
-        .post .bar{
-            width: 100%;
-            height: 60px;
-        }
-        .post .image img{
-            width: 100%;
-        }
-        .post .icons, .liked, .coments{
-            padding: 10px 15px;
-        }
-
-
-        .menu {
-            padding: 50px;
-            transition: padding 0.5s;
-            background-color: #ccf;
-            margin-bottom: 10px;
-        }
-        .abrir {
-            padding: 0px;
-        }
-    </style>
 </head>
 <body>
     <?php  
