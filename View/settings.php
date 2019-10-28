@@ -37,21 +37,21 @@
                     <h3 class="dib"><?php echo $_SESSION['user']; ?></h3><br>
                     <a class="dib" href="#">Alterar foto do perfil</a>
                 </div>
-                <div class="inputs">
+                <div class="inputs box">
                     <label>Nome</label>
-                    <input type="text" name=""><br>
+                    <input type="text" name="" value='<?php echo "$_SESSION[name]"; ?>'><br>
 
-                    <label>Nome de uauário</label>
-                    <input type="text" name=""><br>
+                    <label>Nome de usuário</label>
+                    <input type="text" name="" value='<?php echo "$_SESSION[user]"; ?>'><br>
 
                     <label>Site</label>
-                    <input type="text" name=""><br>
+                    <input type="text" name="" value='<?php echo "$_SESSION[website]"; ?>'><br>
 
-                    <label>biografia</label>
-                    <input type="text" name=""><br>
+                    <label>Biografia</label>
+                    <input type="text" name="" value='<?php echo "$_SESSION[bio]"; ?>'><br>
 
                     <label>Email</label>
-                    <input type="text" name=""><br>
+                    <input type="text" name="" value='<?php echo "$_SESSION[phoneMail]"; ?>'><br>
 
                     <label>Sexo</label>
                     <select name="">

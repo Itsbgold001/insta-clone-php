@@ -55,9 +55,9 @@
                     <p><?php echo $_SESSION['bio'];?></p><br>
                     <a href="http://localhost/instaMVP/View/profile.php">www.instamvp/<?php echo $_SESSION['user'];?>.com.br</a>
                 </footer>
-
             </div>
         </header>
+        <?php include_once('../Controller/showPosts.php') ;?>
     </section>
 
 </body>
