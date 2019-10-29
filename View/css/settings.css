@@ -1,6 +1,6 @@
 .menu,.data{
-    position: absolute;
-    height: 600px;
+    float: left;
+    height: 500px;
     background: #fff;
     border: 1px solid #ccc;
     margin: 0 -3px;
@@ -8,7 +8,6 @@
 }
 
 .menu{
-    top: 100px;
     width: 240px;
 }
 .menu ul li{
@@ -24,10 +23,9 @@
 }
 
 .data{
-    top: -140px;
-    margin: 240px;
-    width: 640px;
-    padding: 50px;
+    width: 720px;
+    height: 460px;
+    padding: 20px 19px 20px 20px;
 }
 .data .profile .user img{
     width: 40px;
@@ -36,14 +34,5 @@
 }
 .data .profile .inputs label{
     font-weight: 700;
-}
-
-.inputs{
-    border: none;
-    color: #444;
-    width: 100%;
-    text-align: start;
-}
-.inputs select{
-    border: 1px solid #e6e6e6;
+    display: block;
 }

@@ -17,7 +17,7 @@
 <body>
 
     <main class="content994">
-        <div class="menu dib">
+        <div class="menu">
             <ul>
                 <li class="active">Editar perfil</li>
                 <li>Alterar senha</li>
@@ -30,28 +30,28 @@
             </ul>
         </div>
 
-        <div class="data dib">
+        <div class="data">
             <div class="profile">
                 <div class="user">
                     <img class="dib" src='../Database/users/<?php echo $_SESSION['photo']; ?>'>
                     <h3 class="dib"><?php echo $_SESSION['user']; ?></h3><br>
                     <a class="dib" href="#">Alterar foto do perfil</a>
                 </div>
-                <div class="inputs box">
+                <div class="inputs">
                     <label>Nome</label>
-                    <input type="text" name="" value='<?php echo "$_SESSION[name]"; ?>'><br>
+                    <input type="text" name="completeName"><br>
 
                     <label>Nome de usuário</label>
-                    <input type="text" name="" value='<?php echo "$_SESSION[user]"; ?>'><br>
+                    <input type="text" name="user"><br>
 
                     <label>Site</label>
-                    <input type="text" name="" value='<?php echo "$_SESSION[website]"; ?>'><br>
+                    <input type="text" name="website"><br>
 
                     <label>Biografia</label>
-                    <input type="text" name="" value='<?php echo "$_SESSION[bio]"; ?>'><br>
+                    <textarea name="bio" cols="30" rows="2"></textarea><br>
 
                     <label>Email</label>
-                    <input type="text" name="" value='<?php echo "$_SESSION[phoneMail]"; ?>'><br>
+                    <input type="text" name=""><br>
 
                     <label>Sexo</label>
                     <select name="">

@@ -8,8 +8,7 @@
     text-align: center;
 } 
 .box input,
-.box button,
-.box select
+.box button
 {
     width: 250px;
     padding: 7px 0;

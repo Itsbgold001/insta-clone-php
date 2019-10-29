@@ -1,7 +1,7 @@
 <?php
     session_start();
     include_once('../Model/verify.php');
-    include("../Model/dbConnection.php");
+    include_once('../Model/dbConnection.php');     
 
     $sql = "SELECT * FROM posts";
     $result = mysqli_query($dbConnection, $sql);
