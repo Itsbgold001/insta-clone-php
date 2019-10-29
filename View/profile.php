@@ -1,6 +1,7 @@
 <?php 
     session_start();
     include_once('../Model/verify.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -58,6 +59,13 @@
 
             </div>
         </header>
+
+        <?php
+    include_once('template/navbar.php'); 
+    include_once('../Controller/PostsData.php');
+    $pd = new PostsData();
+    $pd->postProfile();
+        ?>
     </section>
 
 </body>

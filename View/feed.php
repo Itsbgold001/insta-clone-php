@@ -19,8 +19,11 @@
 </head>
 <body>
     <?php  
-        include_once('./template/navbar.php');
-        include_once('../Controller/showPosts.php');
-    ?>
+       include_once('template/navbar.php'); 
+       include_once('../Controller/PostsData.php');
+       $pd = new PostsData();
+       $pd->postFeed();
+       
+   ?>
 </body>
 </html>

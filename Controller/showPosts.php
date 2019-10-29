@@ -1,7 +1,7 @@
 <?php
     session_start();
     include_once('../Model/verify.php');
-    include_once('../Model/dbConnection.php');     
+    include("../Model/dbConnection.php");     
 
     $sql = "SELECT * FROM posts";
     $result = mysqli_query($dbConnection, $sql);
@@ -16,6 +16,7 @@
     if($sql === FALSE) { 
         die(mysqli_error(""));
     }
+    
     
     foreach ($album as $photo){
         $row = mysqli_fetch_assoc($query);
