@@ -20,6 +20,7 @@
 </head>
 <body>
 <?php 
+    session_abort();
     include_once('template/navbar.php'); 
     include_once('../Controller/ProfileData.php');
     $pd = new ProfileData();
@@ -61,10 +62,10 @@
         </header>
 
         <?php
-    include_once('template/navbar.php'); 
-    include_once('../Controller/PostsData.php');
-    $pd = new PostsData();
-    $pd->postProfile();
+            include_once('template/navbar.php'); 
+            include_once('../Controller/PostsData.php');
+            $pd = new PostsData();
+            $pd->postProfile();
         ?>
     </section>
 

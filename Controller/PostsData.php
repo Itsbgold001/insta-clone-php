@@ -72,40 +72,45 @@
         }
 
         public function postProfile(){
-   session_start();
-    include_once('../Model/verify.php');
-    include("../Model/dbConnection.php");     
+            session_start();
+            include_once('../Model/verify.php');
+            include("../Model/dbConnection.php");     
 
-    $sql = "SELECT photo FROM posts WHERE user = '$_SESSION[user]'";
-    $result = mysqli_query($dbConnection, $sql);
-    
-    while ($row = mysqli_fetch_array($result)){
-        $album[] = $row;   
-    }
+            $sql = "SELECT photo FROM posts WHERE user = '$_SESSION[user]'";
+            $result = mysqli_query($dbConnection, $sql);
+            
+            while ($row = mysqli_fetch_array($result)){
+                $album[] = $row;   
+            }
 
-    $sql = "SELECT * FROM posts  WHERE user = '$_SESSION[user]'";
-    $query = mysqli_query($dbConnection,$sql);
-    
-    if($sql === FALSE) { 
-        die(mysqli_error(""));
-    }
-    
-    
-    foreach ($album as $photo){
-        $row = mysqli_fetch_assoc($query);
-        $sql2 = "SELECT photo FROM users WHERE user = '$row[user]'";
-        $query2 = mysqli_query($dbConnection,$sql2);
-        $dbArray = mysqli_fetch_array($query2);
-        $user = $dbArray[0];
-        echo "
-                <figure class='image'>
-                    <img src='../Database/posts/" .$photo['photo']. "' width='500px'> </img>
-                </figure>   
-
-
-      
-        ";
+            $sql = "SELECT * FROM posts  WHERE user = '$_SESSION[user]'";
+            $query = mysqli_query($dbConnection,$sql);
+            
+            if($sql === FALSE) { 
+                die(mysqli_error(""));
+            }
+            
+            
+            foreach ($album as $photo){
+                $row = mysqli_fetch_assoc($query);
+                $sql2 = "SELECT photo FROM users WHERE user = '$row[user]'";
+                $query2 = mysqli_query($dbConnection,$sql2);
+                $dbArray = mysqli_fetch_array($query2);
+                $user = $dbArray[0];
+                echo "
+                        <figure class='image-feed'>
+                            <img width='281px' height='281px'></img>
+                            <style>
+                                .image-feed{
+                                    background-image: url('../Database/posts/" .$photo['photo']."');
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    
+                                }
+                            </style>
+                        </figure>   
+                ";
+                }
+                mysqli_close($dbConnection);
         }
-        mysqli_close($dbConnection);
     }
-}
