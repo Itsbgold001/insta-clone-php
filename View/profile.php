@@ -1,7 +1,6 @@
 <?php 
     session_start();
     include_once('../Model/verify.php');
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

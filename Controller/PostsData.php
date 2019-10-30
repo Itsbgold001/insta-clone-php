@@ -101,11 +101,10 @@
                         <figure class='image-feed'>
                             <img width='281px' height='281px'></img>
                             <style>
-                                .image-feed{
+                                .image-feed img{
                                     background-image: url('../Database/posts/" .$photo['photo']."');
-                                    background-size: contain;
-                                    background-repeat: no-repeat;
-                                    
+                                    background-size: cover;
+                                    background-position: center;
                                 }
                             </style>
                         </figure>   
