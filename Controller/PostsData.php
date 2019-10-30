@@ -98,15 +98,8 @@
                 $dbArray = mysqli_fetch_array($query2);
                 $user = $dbArray[0];
                 echo "
-                        <figure class='image-feed'>
-                            <img width='281px' height='281px'></img>
-                            <style>
-                                .image-feed img{
-                                    background-image: url('../Database/posts/" .$photo['photo']."');
-                                    background-size: cover;
-                                    background-position: center;
-                                }
-                            </style>
+                        <figure class='image-feed' style='display: inline-block; padding: 10px 20px'>
+                            <img src='../Database/posts/".$photo['photo']."' width='281px' height='281px'></img>
                         </figure>   
                 ";
                 }
