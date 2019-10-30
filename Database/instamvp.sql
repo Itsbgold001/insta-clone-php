@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Tempo de geração: 27-Out-2019 às 22:11
--- Versão do servidor: 10.4.8-MariaDB
--- versão do PHP: 7.3.10
+-- Host: 127.0.0.1
+-- Generation Time: 30-Out-2019 às 15:06
+-- Versão do servidor: 10.1.38-MariaDB
+-- versão do PHP: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `instamvp`
+-- Database: `instamvp`
 --
 CREATE DATABASE IF NOT EXISTS `instamvp` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `instamvp`;
@@ -40,16 +40,16 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `dateNow` datetime NOT NULL,
   `likes` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `posts`
 --
 
 INSERT INTO `posts` (`id`, `user`, `photo`, `subtitle`, `hashtags`, `dateNow`, `likes`) VALUES
-(10, 'gcaires', '5db481de36575.jpg', '&#34;Apaga com um sorriso toda a tristeza que te invade a alma. Assim não darás aos que te odeiam a alegria de te verem chorando, mas darás aos que te amam a alegria de te verem sorrindo.&#34;', '#sky #airplane #travell', '2019-10-26 14:26:54', 0),
-(11, 'jeff', '5db4b6c76f76e.jpg', '\"Aproveite os pequenos momentos de alegria da vida, pois um dia você olhará para trás e perceberá que esses momentos foram os que fizeram a sua vida feliz.\"', '#purple #drone\r\n', '2019-10-26 18:12:39', 0),
-(12, 'fake', '5db59d1534ae1.jpg', '', '', '2019-10-27 10:35:17', 0);
+(54, 'laerciom', '5db995c8cac90.jpg', 'Eu e minha nega ', '#love ', '2019-10-30 10:53:12', 0),
+(55, 'jeff', '5db997b62e4a1.jpg', 'Eu putÃ£o', '#varÃ£o', '2019-10-30 11:01:26', 0),
+(56, 'gcaires', '5db998a6513b8.jpg', 'Sei lÃ¡', '#criatividade0', '2019-10-30 11:05:26', 0);
 
 -- --------------------------------------------------------
 
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `completeName` varchar(40) NOT NULL,
   `user` varchar(20) NOT NULL,
   `pass` varchar(30) NOT NULL,
-  `bio` text DEFAULT NULL,
+  `bio` text,
   `verified` int(11) DEFAULT NULL,
   `followers` int(11) DEFAULT NULL,
   `follow` int(11) DEFAULT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `phoneMail` (`phoneMail`),
   UNIQUE KEY `user` (`user`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `users`
@@ -81,8 +81,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `phoneMail`, `completeName`, `user`, `pass`, `bio`, `verified`, `followers`, `follow`, `posts`, `photo`) VALUES
 (1, 'gcaires', 'Guilherme Caires', 'gcaires', '1', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'gcaires.jpg'),
-(2, 'jeff@gmail.com', 'Jefferson Eloy', 'jeff', '1', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'default.jpg'),
-(3, '1', 'Iai Fake', 'fake', '1', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'default.jpg');
+(2, 'jeff', 'Jefferson Eloy', 'jeff', '1', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'jeff.jpg'),
+(3, '1', 'Iai Fake', 'fake', '1', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'default.jpg'),
+(5, 'laerciom', 'Laercio Marques', 'laerciom', '12345678', 'Oi, bem vindo ao meu perfil!', NULL, 0, 0, 0, 'laerciom.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
