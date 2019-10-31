@@ -1,7 +1,7 @@
 <?php
     class PostsData {
 
-        public function postFeed(){
+        public function postFeed() {
             session_start();
             include_once('../Model/verify.php');
             include("../Model/dbConnection.php");     
