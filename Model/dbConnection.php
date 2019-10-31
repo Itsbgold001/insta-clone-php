@@ -21,8 +21,23 @@ class Conexao{
 
         $con->query($sql);
     }
-    public function Busca(){
-        
+    public function Login($phoneMail,$password){
+
+        $sql = "SELECT phoneMail,pass FROM users WHERE phoneMail = '$phoneMail'";
+
+        $con = $this->Conectar();
+       
+        $con->query($sql);    
+        // Resultado da pesquisa
+    $dbArray = mysqli_fetch_array($con);
+
+    // Validacao de login
+    if ($phoneMail == $dbArray[0]  && $password == $dbArray[1]) {
+    include_once("../Model/session.php");
+    header('Location: ../View/feed.php');
+    } else {
+    header('Location: ../View/login.html');
+    }
     }
     
 }
